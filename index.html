@@ -7,16 +7,15 @@
     </head>
     <body>
         <h1>Survey Form</h1>
-        <p>Tell us about yourself</p>
+        <em>Tell us about yourself</em>
         <form action="" method="post">
-            <fieldset>
-                <label for="name">Name <input type="text" id="name" name="name"></label>
-                <label for="email">Email <input type="email" id="email" name="email" ></label>
-                <label for="age">Age(optional) <input type="number" min="8" max="100"></label>
+           
+            <fieldset> <label for="name">Name <input type="text" id="name" name="name" required placeholder="Enter your name"></label> </fieldset>
+            <fieldset> <label for="email">Email <input type="email" id="email" name="email" required placeholder="Enter your email" ></label> </fieldset>
+            <fieldset> <label for="age">Age(optional) <input type="number" min="8" max="100" required placeholder="Enter your age"></label> </fieldset>
                 
-            </fieldset>
             <fieldset>
-                <label for="current_role">what is your current role?
+                <label for="current_role">What is your current role?
                     <select id="current_role" name="current_role">
                         <option value="">Select current role</option>
                         <option value="Student">Student</option>
@@ -26,6 +25,15 @@
                         <option value="other">Other</option>
                     </select>
                 </label>
+            </fieldset>
+            <fieldset>
+                <legend>Would you prefer learning with community or individually?</legend>
+                <label for="Definetly" > <input type="radio" name="reference" id="Definetly" value="Definetly" checked class="inline">Definetly </label>
+                <label for="Maybe"> <input type="radio" name="reference" id="Maybe" value="Maybe" class="inline">Maybe</label>
+                <label for="Notsure"> <input type="radio" name="reference" id="notsure" value="notsure" class="inline">Not sure</label>
+            </fieldset>
+
+             <fieldset> 
                 <label for="learning_method" name="learning_method">What is your favourite learning method?
                     <select id="learning_method">
                         <option value="">Select an option</option>
@@ -37,13 +45,19 @@
                 </label>
             </fieldset>
             <fieldset>
-
+                <legend>What are you planning to learn?</legend>
+                <label for="frontend"><input id="frontend" name="concept" value="frontend" class="inline" type="checkbox">Frontend</label>
+                <label for="backend"><input id="backend" name="concept" value="backend"class="inline" type="checkbox">Backend</label>
+                <label for="datavisualization"><input id="datavisualization" name="concept" value="datavisualization" class="inline" type="checkbox">Data Visualization</label>
+                <label for="challenges"><input id="challenges" name="concept" value="challenges" class="inline" type="checkbox">Challenges</label>
+                    
             </fieldset>
             <fieldset>
-
+                <legend for="comments">Any comments or suggestions?</legend>
+                <textarea rows="5" cols="6" placeholder="Enter your comment here..."></textarea>
             </fieldset>
             <fieldset>
-
+                <input type="submit" value="Submit">
             </fieldset>
         </form>
     </body>
